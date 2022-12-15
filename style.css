@@ -1,0 +1,45 @@
+.pageContainer{
+  width: 750px;
+  margin: 0 auto;
+}
+.gameGrid{
+  display: flex;
+  flex-wrap: wrap;
+  height: 600px;
+  width: 100%;
+  border: 1px solid rgb(237, 235, 235);
+}
+.gameGrid img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+
+.timer__items {
+  display: flex;
+  font-size: 48px;
+}
+.timer__item {
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+.timer__item:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: -15px;
+}
